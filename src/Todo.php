@@ -22,7 +22,7 @@ class Todo
         ]);
     }
 
-    public function get()
+    public function getAllTodos()
     {
         $query = "SELECT * FROM todos";
         $stmt = $this->pdo->query($query);
