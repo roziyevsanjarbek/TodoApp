@@ -39,7 +39,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aperiam autem eveniet illum ipsa, nihil
                 numquam officiis pariatur placeat quae quasi recusandae repellat similique tempora tenetur ut vel veniam
                 veritatis.</p>
-            <form method="POST" action="/store">
+            <form method="POST" action="/todos">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Recipient's username"
                            aria-label="Recipient's username" aria-describedby="button-addon2"
@@ -59,8 +59,8 @@
                        <li class="' . $todo['status'] . '  list-group-item d-flex justify-content-between align-items-center">  
                       ' . $todo['title'] . '
                       <div>
-                     <a href = "/In_progress?id=' . $todo["id"] . '" class="btn btn-outline-success">In Progress</ahref>
-                     <a href = "/pending?id=' . $todo["id"] . '"class="btn btn-outline-success">Pending</a>
+                     <a href = "/in_progress/' . $todo["id"] . '" class="btn btn-outline-success">In Progress</ahref>
+                     <a href = "/pending/' . $todo["id"] . '"class="btn btn-outline-success">Pending</a>
                      </div>
                      </li>
                     ';
@@ -69,8 +69,8 @@
                        <li class="' . $todo['status'] . '  list-group-item d-flex justify-content-between align-items-center">  
                       ' . $todo['title'] . '
                       <div>
-                     <a href = "/in_progress?id=' . $todo["id"] . '" class="btn btn-outline-success">In Progress</ahref>
-                     <a href = "/complete?id=' . $todo["id"] . '"class="btn btn-outline-success">Complete</a>
+                     <a href = "/in_progress/' . $todo["id"] . '" class="btn btn-outline-success">In Progress</ahref>
+                     <a href = "/completed/' . $todo["id"] . '"class="btn btn-outline-success">Complete</a>
                      </div>
                      </li>
                     ';
@@ -79,8 +79,8 @@
                        <li class="' . $todo['status'] . '  list-group-item d-flex justify-content-between align-items-center">  
                       ' . $todo['title'] . '
                       <div>
-                     <a href = "/pending?id=' . $todo["id"] . '" class="btn btn-outline-success">Pending</ahref>
-                     <a href = "/complete?id=' . $todo["id"] . '"class="btn btn-outline-success">Complate</a>
+                     <a href = "/pending/' . $todo["id"] . '" class="btn btn-outline-success">Pending</ahref>
+                     <a href = "/completed/' . $todo["id"] . '"class="btn btn-outline-success">Complate</a>
                      </div>
                      </li>
                     ';
