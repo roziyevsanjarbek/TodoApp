@@ -55,4 +55,20 @@ class Todo
         ]);
 
     }
+    public function dectoyr (int $id): bool{
+        $query = "Delete FROM todos WHERE id=:id";
+        return $this->pdo->prepare($query)->execute([
+            ":id" => $id
+        ]);
+    }
+
+    public function getTodo(int $id){
+        $query = "SELECT * FROM todos WHERE $id=:id";
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute([
+            ":id" => $id
+        ]);
+        return $stmt->fetch();
+    }
+
 }
