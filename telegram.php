@@ -17,7 +17,7 @@ if (!$botToken) {
 
 $telegramApiUrl = "https://api.telegram.org/bot{$botToken}/sendMessage";
 
-$chatId = '7585290599';
+$chat_id = '7585290599';
 $message = 'Salom! Bu PHP orqali yuborilgan xabar.';
 
 $client = new Client();
@@ -25,14 +25,14 @@ $client = new Client();
 try {
     $response = $client->post($telegramApiUrl, [
         'form_params' => [
-            'chat_id' => $chatId,
+            'chat_id' => $chat_id,
             'text' => $message,
         ],
     ]);
 
-    echo "Xabar yuborildi! Javob: " . $response->getBody();
-} catch (Exception $e) {
-    echo "Xatolik yuz berdi: " . $e->getMessage();
+    echo "Javob keldi: " . $response->getBody();
+} catch (Exception $add) {
+    echo "Xatolik: " . $add->getMessage();
 }
 
 
