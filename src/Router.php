@@ -8,9 +8,11 @@ class Router
     {
         $this->currentRoute = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
-    public function getResource(){
-        if(isset(explode("/",$this->currentRoute)[2])){
-            $resourceID = (int)explode("/",$this->currentRoute)[2];
+
+    public function getResource()
+    {
+        if (isset(explode("/", $this->currentRoute)[2])) {
+            $resourceID = (int)explode("/", $this->currentRoute)[2];
             return $resourceID ? $resourceID : '';
         }
     }
@@ -19,7 +21,7 @@ class Router
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $resourcesId = $this->getResource();
-            $route = str_replace('{id}',$resourcesId, $route);
+            $route = str_replace('{id}', $resourcesId, $route);
             if ($route == $this->currentRoute) {
                 $callback($resourcesId);
                 exit();
@@ -37,5 +39,18 @@ class Router
         }
     }
 
+    public function put($route, $callback)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if ($_POST['_method'] == 'PUT') {
+                $resourceId = $this->getResource();
+                $route = str_replace('{id}', $resourceId, $route);
+                if ($route == $this->currentRoute) {
+                    $callback($resourceId);
+                    exit();
+                }
+            }
+        }
+    }
 
 }

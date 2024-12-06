@@ -1,8 +1,7 @@
 <?php
 
 
-function view($page, array $data = [])
-{
+function view (string $page, array $data = []) {
     extract($data);
     require 'views/' . $page . '.php';
 }
