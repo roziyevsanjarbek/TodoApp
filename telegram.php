@@ -31,8 +31,8 @@ try {
     ]);
 
     echo "Javob keldi: " . $response->getBody();
-} catch (Exception $add) {
-    echo "Xatolik: " . $add->getMessage();
+} catch (Exception $e) {
+    echo "Xatolik: " . $e->getMessage();
 }
 
 
