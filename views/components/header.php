@@ -9,57 +9,105 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-        body {
-            background-image: url("https://wallpapercave.com/wp/wp12683361.jpg");
-        }
         /*body {*/
-        /*    background-image: url('https://banner2.cleanpng.com/20180611/pry/aa8mb0vr4.webp');*/
-        /*    background-size: cover;*/
-        /*    background-position: center;*/
-        /*    height: 100vh;*/
-        /*    display: flex;*/
-        /*    justify-content: center;*/
-        /*    align-items: center;*/
-        /*    color: white;*/
+        /*    background-image: url("https://wallpapercave.com/wp/wp12683361.jpg");*/
         /*}*/
+        /*!*body {*!*/
+        /*!*    background-image: url('https://banner2.cleanpng.com/20180611/pry/aa8mb0vr4.webp');*!*/
+        /*!*    background-size: cover;*!*/
+        /*!*    background-position: center;*!*/
+        /*!*    height: 100vh;*!*/
+        /*!*    display: flex;*!*/
+        /*!*    justify-content: center;*!*/
+        /*!*    align-items: center;*!*/
+        /*!*    color: white;*!*/
+        /*!*}*!*/
+
+        html{
+            height: 100%;
+            margin: 0;
+        }
+
+        .container-home {
+            flex: 1;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        .navbar {
+            border-bottom: 1px solid #ddd;
+        }
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 50px 20px;
+        }
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .btn-primary-home {
+            background-color: #ff5722;
+            border: none;
+        }
+        .testimonials {
+            background: #f7f7f7;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .testimonials .quote {
+            font-style: italic;
+            color: #555;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f1f1f1;
+        }
 
         .todo-body {
             max-width: 700px;
-            box-shadow: 0 0 5px 5px #8a8585;
-            background: bisque;
+            box-shadow: 0 0 5px 5px #ccc;
         }
 
         .todo-text {
             font-weight: bold;
-            color: red;
         }
 
         .completed {
             text-decoration: line-through;
             color: green;
-
         }
 
         .in_progress {
-            text-decoration: line-through;
-            color: red;
+            text-decoration: underline;
+            color: orange;
         }
-        .error-container {
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 30px;
-            border-radius: 10px;
-        }
-        .error-title {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        .error-text {
-            font-size: 1.2rem;
-        }
-        .back-btn {
-            margin-top: 20px;
-            font-size: 1rem;
+        .home-body {
+            background-color: #f8f9fa;
         }
         .edit-container {
             max-width: 600px;
@@ -79,6 +127,14 @@
         .btn-actions {
             display: flex;
             justify-content: space-between;
+        }
+        .form-container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
